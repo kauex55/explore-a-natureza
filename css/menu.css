@@ -1,0 +1,21 @@
+.nav{
+    position: absolute;
+    width: 1200px;
+    height: 64px;
+    top: 30px;
+    left: 240px;
+    background-color: #2fa97c;
+
+}
+
+.lista-links{
+margin: 10px;
+    display: inline-flex;
+    padding: 2px;
+    font-family: Poppins;
+    font-size: 14px;
+    font-weight: 700;
+    line-height: 21px;
+    text-align: left;
+
+}
