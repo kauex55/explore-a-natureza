@@ -1,58 +1,182 @@
-
-.natureza-section{
+/* Define o estilo da seção principal */
+.main {
+    margin-left: 80px;
     display: flex;
-    gap: 32px;
 }
 
-
-.natureza-text h2{
-    font-size: 32px;
-    margin-bottom: 16px;
-    color: var(--color-brown);
+/* Estiliza o título principal (H1) */
+h1 {
+    color: var(--color-title);
     font-family: var(--font-display);
+    font-size: 64px;
+    font-weight: 700;
+    letter-spacing: 2px;
+    padding: 26px 0px 26px;
+    margin-left: 80px;
 }
 
-.natureza-text p {
+/* Define a estilização para a seção de conteúdo */
+.conteudo {
+    display: flex;
+    flex-direction: column;
+}
+
+/* Estiliza o título da seção principal (H2) */
+.main-title {
+    display: flex;
+    align-items: center;
+    padding: 13px 13px 13px 0px;
+}
+
+h2 {
+    color: var(--color-brown);
+    font-size: 32px;
+    font-weight: 700;
+}
+
+span {
+    padding-right: 6px;
+}
+
+/* Define o estilo para o texto principal */
+.main-text {
+    color: var(--color-text);
+    font-family: var(--font-primary);
     font-size: 17.6px;
-    line-height: 28.8px;
-    margin-bottom: 16px;
-    max-width: 900px;
+    font-weight: 400;
+    margin-top: 15px;
+    margin-bottom: 15px;
+    flex-wrap: wrap;
 }
 
-
-.natureza-img-list{
-    width: 300px;
+/* Estiliza a seção de rolagem (scroll) */
+.scroll {
     height: 600px;
-    overflow-y: scroll;
+    max-width: 260px;
+    margin-top: 50px;
+    margin-right: 35px;
     overflow-x: hidden;
-    position: relative;
 }
 
-.natureza-img{
-    cursor: pointer;
+/* Estiliza a barra de rolagem personalizada */
+.scroll::-webkit-scrollbar {
+    width: 12px;
 }
 
-.natureza-img img{
+.scroll::-webkit-scrollbar-thumb {
+    background-color: var(--background-green);
+    border-radius: 5px;
+}
+
+/* Define o estilo das imagens */
+.img {
+    height: 600px;
     width: 900px;
 }
 
-.natureza-img-list span{
-    position: absolute;
-    top: 0;
-    right: 0;
-    background-color: var(--background-green);
-    color: var(--color-white);
+/* Define as regras de estilo para telas menores (max-width: 768px) */
+@media screen and (max-width: 768px) {
+    h1 {
+        font-size: 60px;
+        margin-left: 40px;
+    }
+    h2 {
+        font-size: 28px;
+        margin-left: 40px;
+    }
+    .main {
+        margin-left: 40px;
+        display: grid;
+        justify-content: space-around;
+        justify-items: center;
+    }
+    .main-text {
+        margin-left: 40px;
+    }
+    .scroll {
+        height: 500px;
+        max-width: 400px;
+        margin-top: 50px;
+        margin-bottom: 40px;
+        margin-right: 35px;
+        overflow-x: hidden;
+    }
 }
 
-
-
-.natureza-img-list::-webkit-scrollbar{
-    width: 10px;
+/* Define as regras de estilo para telas ainda menores (max-width: 600px) */
+@media screen and (max-width: 600px) {
+    h1 {
+        font-size: 55px;
+        margin-left: 60px;
+    }
+    h2 {
+        font-size: 24px;
+        justify-items: center;
+        justify-content: center;
+    }
+    .main-text {
+        font-size: 16px;
+    }
+    .main {
+        margin-left: 40px;
+        display: grid;
+        justify-content: space-around;
+        justify-items: center;
+    }
+    .main-text {
+        display: grid;
+        justify-items: center;
+    }
+    .scroll {
+        height: 500px;
+        max-width: 400px;
+        margin-top: 50px;
+        margin-bottom: 40px;
+        margin-right: 35px;
+        overflow-x: hidden;
+    }
 }
 
-.natureza-img-list::-webkit-scrollbar-thumb{
-    background-color: #75d2a8;
-    border-left: 2px solid #d8d8d8;
-    border-right: 2px solid #d8d8d8;
-    border-radius: 2px;
+/* Define as regras de estilo para telas maiores (min-width: 600px) */
+@media screen and (min-width: 600px) {
+    .js-conteudo section {
+        display: none;
+    }
+    .js-conteudo section.active {
+        display: block;
+    }
+}
+
+/* Define as regras de estilo para telas ainda menores (max-width: 470px) */
+@media screen and (max-width: 470px) {
+    h1 {
+        font-size: 48px;
+        margin-left: 30px;
+    }
+    h2 {
+        font-size: 22px;
+        justify-items: center;
+        justify-content: center;
+    }
+    .main {
+        margin-left: 30px;
+        display: grid;
+        justify-content: space-around;
+        justify-items: center;
+    }
+    .main-text {
+        display: grid;
+        justify-items: center;
+        margin-left: 10px;
+        margin-right: 10px;
+    }
+    .scroll {
+        height: 400px;
+        max-width: 300px;
+        margin-top: 50px;
+        margin-bottom: 40px;
+        margin-right: 35px;
+        overflow-x: hidden;
+        margin-left: 30px;
+    }
 }

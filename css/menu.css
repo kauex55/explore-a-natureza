@@ -1,31 +1,121 @@
-.nav{
-    
-    width: 1200px;
+/* Estiliza a barra de menu */
+.menu {
+    max-width: var(--width);
     height: 64px;
-    background: #2FA97C;
-    float: right;
-
+    margin: 2rem 0 2rem auto;
+    background-color: var(--background-green);
+    color: var(--color-white);
+    display: flex;
 }
 
-.link-nav a{
-    display: inline-flex;
-    align-items: center;
-    gap: 6px;
-    padding: 10px;
-    font-weight: bold;
+/* Estiliza a lista de menu (os itens do menu) */
+.js-menu {
+    display: flex;
+}
+
+/* Estiliza os itens individuais do menu */
+.menu-link {
+    display: flex;
     font-size: 14px;
+    font-weight: 700;
+    padding: 6px 10px;
+    letter-spacing: 1.6px;
+    align-items: center;
+    line-height: normal;
+    border-radius: 5px;
+    color: var(--color-white);
+    margin: 5px 0px 5px 0px;
+}
+
+/* Estiliza os links dentro dos itens do menu */
+a {
     color: var(--color-white);
 }
 
-.link-nav a:hover{
-    color: var(--color-brown);
+/* Estiliza os itens do menu quando o mouse passa por cima */
+.menu-link:hover {
     background-color: var(--color-white);
-    border-radius: 5px;
-    transition: 0.3s ease-in-out;
+    color: var(--color-brown);
 }
 
-.lista-nav{
-    display: flex;
-    padding: 10px;
-    flex-wrap: wrap;
+/* Estiliza os links dentro dos itens do menu quando o mouse passa por cima */
+a:hover {
+    color: var(--color-brown);
+}
+
+/* Estiliza o botão de toggle (para abrir o menu em telas menores) */
+.toggle {
+    align-items: center;
+    gap: 0.5rem;
+    background-color: #494949;
+    padding: 0.625rem;
+    border-radius: 5px;
+    letter-spacing: 0.1rem;
+    font-weight: bold;
+    display: none;
+}
+
+/* Define as regras de estilo para telas menores (max-width: 768px) */
+@media screen and (max-width: 768px) {
+    .menu {
+        margin: 2rem -5.5rem 2rem 4rem;
+    }
+    .js-menu {
+        display: none;
+        animation: fadeOut .3s forwards;
+    }
+
+    .toggle {
+        display: flex;
+    }
+
+    /* Estiliza o menu quando está ativo (visível) em telas menores */
+    .js-menu.active {
+        display: block;
+        position: absolute;
+        top: 69px;
+        left: 0;
+        width: 100%;
+        margin: 1.5rem 0 auto 2rem;
+        background-color: var(--background-green);
+        z-index: 100;
+        animation: slideDownMenu .5s forwards;
+    }
+
+    /* Estiliza o ícone de toggle quando o menu está ativo */
+    .toggle span.active {
+        animation: slideDownMenu .5s forwards;
+    }
+}
+
+/* Define as regras de estilo para telas ainda menores (max-width: 600px) */
+@media screen and (max-width: 600px) {
+    .menu {
+        margin: 2rem -5.5rem 2rem 2rem;
+    }
+
+    /* Estiliza o menu quando está ativo (visível) em telas ainda menores */
+    .js-menu.active {
+        display: block;
+        position: absolute;
+        top: 69px;
+        left: 0;
+        width: 100%;
+        margin: 1.5rem 0 auto 4rem;
+        background-color: var(--background-green);
+        z-index: 100;
+        animation: slideDownMenu .5s forwards;
+    }
+}
+
+/* Define a animação de deslizar para baixo (slideDown) do menu */
+@keyframes slideDownMenu {
+    from {
+        opacity: 0;
+        transform: translateX(-10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
 }

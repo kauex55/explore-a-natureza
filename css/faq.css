@@ -1,14 +1,94 @@
-.faq dt{
+/* Define o estilo da seção FAQ */
+.faq1 {
+    margin-left: 80px;
+    padding: 20px 0px 0px 0px;
+}
+
+/* Define o estilo dos títulos das perguntas no FAQ */
+h3 {
+    font-weight: 400;
     font-size: 24px;
-    color: #814813;
+    color: var(--color-brown);
+    border-bottom: 1px solid #D8D8D8;
+    padding: 10px;
+    font-family: var(--font-primary);
+    margin-top: 30px;
     margin-bottom: 30px;
 }
 
-.faq dd{
-    font-size: 17.6px;
-    color: #626262;
-    font-weight: 400px;
-    line-height: 28.8px;
-    margin-bottom: 14px;
+/* Define o estilo dos ícones de expansão/recolhimento das respostas no FAQ */
+.faq1 span {
+    font-size: 20px;
+}
 
+/* Define o estilo do título geral da FAQ */
+.faq-title {
+    color: var(--color-title);
+    font-family: var(--font-display);
+    font-size: 64px;
+    font-weight: 700;
+    letter-spacing: 2px;
+    padding: 26px 0px 0px 0px;
+}
+
+/* Define o estilo do texto das respostas no FAQ */
+p {
+    color: var(--color-text);
+    font-family: var(--font-primary);
+    font-size: 17.6px;
+    font-weight: 400;
+    margin-top: 30px;
+    margin-bottom: 30px;
+}
+
+/* Define o estilo dos ícones de expansão/recolhimento das respostas no FAQ (outra classe) */
+.faq1 span {
+    font-size: 20px;
+}
+
+/* Define as regras de estilo para telas menores (max-width: 768px) */
+@media screen and (max-width: 768px) {
+    .faq1 {
+        margin-left: 40px;
+        padding: 20px 0px 0px 0px;
+    }
+    .faq-title {
+        font-size: 60px;
+    }
+    h3 {
+        font-size: 22px;
+        margin-left: 40px;
+    }
+    p {
+        margin-left: 40px;
+    }
+}
+
+/* Define as regras de estilo para telas ainda menores (max-width: 600px) */
+@media screen and (max-width: 600px) {
+    .faq1 {
+        margin-left: 40px;
+        padding: 20px 0px 0px 0px;
+    }
+    .faq-title {
+        font-size: 55px;
+    }
+    h3 {
+        font-size: 20px;
+    }
+    p {
+        font-size: 16px;
+        margin-left: 40px;
+    }
+}
+
+/* Define as regras de estilo para telas muito pequenas (max-width: 470px) */
+@media screen and (max-width: 470px) {
+    .faq-title {
+        font-size: 48px;
+    }
+    .faq1 {
+        margin-left: 15px;
+        padding: 20px 0px 0px 0px;
+    }
 }

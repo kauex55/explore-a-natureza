@@ -1,3 +1,4 @@
+
 *{
     margin: 0;
     padding: 0;
@@ -35,11 +36,11 @@ img{
     display: block;
 }
 
-.titulo{
-    font-size: 64px;
+.title{
+    font-size: 4rem;
     max-width: 1200px;
-    margin: 32px auto;
-    padding: 8px;
+    margin: 2rem auto;
+    padding: 0.5rem;
     color: var(--color-title);
     font-family: var(--font-display);
     letter-spacing: 2px;
@@ -49,5 +50,5 @@ img{
 .container{
     max-width: 1200px;
     margin: 0 auto;
-    padding: 16px;
+    padding: 1rem;
 }
